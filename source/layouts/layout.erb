@@ -11,7 +11,9 @@
     <%= javascript_include_tag "site" %>
   </head>
   <body>
-    <%= partial "shared/navigation" %>
-    <%= yield %>
+    <div class="container-fluid">
+      <%= partial "shared/navigation" %>
+      <%= yield %>
+    </div>
   </body>
 </html>
