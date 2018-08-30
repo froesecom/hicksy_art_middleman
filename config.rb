@@ -8,11 +8,9 @@ activate :autoprefixer do |prefix|
 end
 
 dato.tap do |dato|
-
   dato.paintings.each do |painting|
     proxy "/paintings/#{painting.slug}", "/templates/painting.html", locals: { painting: painting }
   end
-
   dato.painting_categories.each do |pc|
     proxy "/#{pc.slug}", "/templates/painting_category.html", locals: { painting_category: pc }
   end
