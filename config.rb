@@ -9,17 +9,18 @@ end
 
 dato.tap do |dato|
 
-  # iterate over the "Blog post" records...
   dato.paintings.each do |painting|
-
-    # ...and create a page for each painting starting from a template!
     proxy "/paintings/#{painting.slug}", "/templates/painting.html", locals: { painting: painting }
+  end
 
+  dato.painting_categories.each do |pc|
+    proxy "/#{pc.slug}", "/templates/painting_category.html", locals: { painting_category: pc }
   end
 end
 
 # tell Middleman to ignore the template
 ignore "/templates/painting.html.erb"
+ignore "/templates/painting_category.html.erb"
 
 # Layouts
 # https://middlemanapp.com/basics/layouts/
