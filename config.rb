@@ -7,6 +7,20 @@ activate :autoprefixer do |prefix|
   prefix.browsers = "last 2 versions"
 end
 
+dato.tap do |dato|
+
+  # iterate over the "Blog post" records...
+  dato.paintings.each do |painting|
+
+    # ...and create a page for each painting starting from a template!
+    proxy "/paintings/#{painting.slug}", "/templates/painting.html", locals: { painting: painting }
+
+  end
+end
+
+# tell Middleman to ignore the template
+ignore "/templates/painting.html.erb"
+
 # Layouts
 # https://middlemanapp.com/basics/layouts/
 
