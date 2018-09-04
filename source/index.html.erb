@@ -1,15 +1,11 @@
 
 <div id="carousel--homepage" class="carousel slide carousel--homepage" data-ride="carousel">
   <div class="carousel-inner">
-    <div class="carousel-item active">
-      <%= image_tag("homepage-bogong.jpg", class: "d-block w-100") %> 
-    </div>
-    <div class="carousel-item">
-      <%= image_tag("homepage-heli.jpg", class: "d-block w-100") %> 
-    </div>
-    <div class="carousel-item">
-      <%= image_tag("homepage-square-head.jpg", class: "d-block w-100") %> 
-    </div>
+    <% featured_paintings(dato.paintings).each do |p| %>
+      <div class="carousel-item active">
+        <%= image_tag(p.photo.url, class: "img-fluid d-block") %> 
+      </div>
+    <% end %>
   </div>
     <a class="carousel-control-prev" href="#carousel--homepage" role="button" data-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>

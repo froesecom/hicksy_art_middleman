@@ -47,6 +47,9 @@ page '/*.txt', layout: false
 # Methods defined in the helpers block are available in templates
 # https://middlemanapp.com/basics/helper-methods/
 
+require "lib/helpers/application_helper"
+helpers ApplicationHelper
+
 # helpers do
 #   def some_helper
 #     'Helping'
