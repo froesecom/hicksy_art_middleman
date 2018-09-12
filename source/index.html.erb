@@ -1,6 +1,5 @@
-
-<div id="carousel--homepage" class="carousel slide carousel--homepage" data-ride="carousel">
-  <div class="carousel-inner">
+<div id="carousel--homepage" class="row carousel slide carousel--homepage" data-ride="carousel">
+  <div class="carousel-inner col-sml-12 col-md-10 mx-auto">
     <% featured_paintings(dato.paintings).each do |p| %>
       <div class="carousel-item active">
         <%= image_tag(p.photo.url, class: "img-fluid d-block") %> 
