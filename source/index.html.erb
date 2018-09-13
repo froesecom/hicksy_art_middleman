@@ -1,3 +1,7 @@
+<% content_for(:head) do %>
+  <%= dato_meta_tags(dato.homepage) %>
+<% end %>
+
 <div id="carousel--homepage" class="row row-eq-height carousel align-items-center slide carousel--homepage" data-ride="carousel">
   <div class="carousel-inner col-sml-12 col-md-10 mx-auto">
     <% featured_paintings(dato.paintings).each do |p| %>
