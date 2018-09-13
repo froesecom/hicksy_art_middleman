@@ -9,15 +9,13 @@ end
 
 dato.tap do |dato|
   dato.paintings.each do |painting|
-    proxy "/paintings/#{painting.slug}", "/templates/painting.html", locals: { painting: painting }, layout: :layout
+    proxy "/paintings/#{painting.slug}.html", "/templates/painting.html", locals: { painting: painting }, layout: :layout
   end
 
   dato.painting_categories.each do |pc|
-    proxy "/#{pc.slug}", "/templates/painting_category.html", locals: { painting_category: pc }, layout: :layout
+    proxy "/#{pc.slug}.html", "/templates/painting_category.html", locals: { painting_category: pc }, layout: :layout
   end
 end
-
-proxy "/about", "/templates/about.html", layout: :layout
 
 # tell Middleman to ignore the template
 ignore "/templates/painting.html.erb"
