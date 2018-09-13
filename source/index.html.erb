@@ -2,7 +2,7 @@
   <div class="carousel-inner col-sml-12 col-md-10 mx-auto">
     <% featured_paintings(dato.paintings).each do |p| %>
       <div class="carousel-item active">
-        <%= image_tag(p.photo.url, class: "img-fluid d-block mx-auto") %> 
+        <%= image_tag(p.photo.url, class: "border-light border img-fluid d-block mx-auto") %> 
       </div>
     <% end %>
   </div>
