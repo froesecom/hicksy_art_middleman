@@ -22,7 +22,6 @@ proxy "/about", "/templates/about.html", layout: :layout
 # tell Middleman to ignore the template
 ignore "/templates/painting.html.erb"
 ignore "/templates/painting_category.html.erb"
-ignore "/templates/about.html.erb"
 
 # Layouts
 # https://middlemanapp.com/basics/layouts/
