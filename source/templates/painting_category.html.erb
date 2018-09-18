@@ -1,5 +1,7 @@
 ---
 ---
-<% current_page.data.title = painting_category.name %>
+<% content_for(:head) do %>
+  <%= dato_meta_tags(painting_category) %>
+<% end %>
 
 <h2><%= painting_category.name %></h2>
