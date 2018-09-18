@@ -7,13 +7,28 @@ activate :autoprefixer do |prefix|
   prefix.browsers = "last 2 versions"
 end
 
+# Helpers
+# Methods defined in the helpers block are available in templates
+# https://middlemanapp.com/basics/helper-methods/
+
+require "lib/helpers/application_helper"
+require "lib/helpers/path_helper"
+helpers ApplicationHelper
+helpers PathHelper
+include PathHelper
+# helpers do
+#   def some_helper
+#     'Helping'
+#   end
+# end
+
 dato.tap do |dato|
   dato.paintings.each do |painting|
     proxy "/paintings/#{painting.painting_category.slug}/#{painting.slug}.html", "/templates/painting.html", locals: { painting: painting }, layout: :layout
   end
 
   dato.painting_categories.each do |pc|
-    proxy "/paintings/#{pc.slug}.html", "/templates/painting_category.html", locals: { painting_category: pc }, layout: :layout
+    proxy painting_category_path(pc), "/templates/painting_category.html", locals: { painting_category: pc }, layout: :layout
   end
 end
 
@@ -43,18 +58,6 @@ page '/*.txt', layout: false
 #   },
 # )
 
-# Helpers
-# Methods defined in the helpers block are available in templates
-# https://middlemanapp.com/basics/helper-methods/
-
-require "lib/helpers/application_helper"
-helpers ApplicationHelper
-
-# helpers do
-#   def some_helper
-#     'Helping'
-#   end
-# end
 
 # Build-specific configuration
 # https://middlemanapp.com/advanced/configuration/#environment-specific-settings
