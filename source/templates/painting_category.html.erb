@@ -5,3 +5,11 @@
 <% end %>
 
 <%= partial "partials/generic_content", locals: {heading: painting_category.name, content: painting_category.overview} %>
+
+<div class="row">
+  <% dato.paintings.select{|p| p.painting_category == painting_category}.each do |p| %>
+    <div class="col">
+      <%= image_tag(p.photo.url, class: "img-fluid") %> 
+    </div>
+  <% end %>
+</div>
