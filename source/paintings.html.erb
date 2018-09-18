@@ -1,7 +1,9 @@
 <ul>
   <% dato.painting_categories.each do |pc| %>
     <li>
-      <%= pc.name %> 
+      <a href="<%= painting_category_path(pc) %>">
+        <%= pc.name %>
+      </a>
     </li>
   <% end %>
 </ul>
