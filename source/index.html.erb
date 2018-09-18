@@ -8,8 +8,8 @@ layout: homepage
 
 <div id="carousel--homepage" class="row row-eq-height carousel align-items-center slide fill-vertical" data-ride="carousel">
   <div class="carousel-inner col-sml-12 col-md-10 mx-auto">
-    <% featured_paintings(dato.paintings).each do |p| %>
-      <div class="carousel-item active">
+    <% featured_paintings(dato.paintings).each.with_index do |p,i| %>
+      <div class="carousel-item <%= 'active' if i == 0 %>">
         <%= image_tag(p.photo.url, class: "carousel--image border img-fluid d-block mx-auto") %> 
       </div>
     <% end %>
