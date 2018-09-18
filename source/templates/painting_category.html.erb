@@ -8,7 +8,7 @@
 
 <div class="row">
   <% dato.paintings.select{|p| p.painting_category == painting_category}.each do |p| %>
-    <div class="col-sm-12 col-md-4">
+    <div class="col-md-12 col-lg-4">
       <%= image_tag(p.photo.url, class: "img-fluid") %> 
     </div>
   <% end %>
