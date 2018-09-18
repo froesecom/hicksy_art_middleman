@@ -4,4 +4,4 @@
   <%= dato_meta_tags(painting_category) %>
 <% end %>
 
-<h2><%= painting_category.name %></h2>
+<%= partial "partials/generic_content", locals: {heading: painting_category.name, content: painting_category.overview} %>
