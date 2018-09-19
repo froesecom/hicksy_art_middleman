@@ -3,7 +3,10 @@
 <% end %>
 <div class="row">
   <div class="col text-center">
-    <a class="oi oi-arrow-left" href="<%= painting_category_path(painting) %>">back to <%= painting.painting_category.name %></a>
+    <span class="my-4 d-block">
+      <a href="<%= painting_category_path(painting) %>"><span class="oi oi-arrow-left"></span> back to <%= painting.painting_category.name %></a>
+    </span>
+    <hr class="my-0">
   </div>
 </div>
 <h2><%= painting.name %></h2>
