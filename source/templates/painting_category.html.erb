@@ -9,7 +9,10 @@
 <div class="row mt-5">
   <% dato.paintings.select{|p| p.painting_category == painting_category}.each do |p| %>
     <div class="col-md-12 col-lg-4 mt-4">
-      <%= image_tag(p.photo.url, class: "img-fluid") %> 
+      <a href="<%= painting_path(p) %>">
+        <%= image_tag(p.photo.url, class: "mb-4 img-fluid") %> 
+        <p class="text-center"><%= p.name %></p>
+      </a>
     </div>
   <% end %>
 </div>
