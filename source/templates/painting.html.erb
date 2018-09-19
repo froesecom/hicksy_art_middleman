@@ -2,8 +2,8 @@
   <%= dato_meta_tags(painting) %>
 <% end %>
 <div class="row">
-  <div class="col">
-    <a href="">back to <%= painting.painting_category.name %></a>
+  <div class="col text-center">
+    <a class="oi oi-arrow-left" href="<%= painting_category_path(painting) %>">back to <%= painting.painting_category.name %></a>
   </div>
 </div>
 <h2><%= painting.name %></h2>
