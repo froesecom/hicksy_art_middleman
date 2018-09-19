@@ -24,7 +24,7 @@ include PathHelper
 
 dato.tap do |dato|
   dato.paintings.each do |painting|
-    proxy "/paintings/#{painting.painting_category.slug}/#{painting.slug}.html", "/templates/painting.html", locals: { painting: painting }, layout: :layout
+    proxy painting_path(painting), "/templates/painting.html", locals: { painting: painting }, layout: :layout
   end
 
   dato.painting_categories.each do |pc|
