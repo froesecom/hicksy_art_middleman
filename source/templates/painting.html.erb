@@ -1,7 +1,10 @@
 <% content_for(:head) do %>
   <%= dato_meta_tags(painting) %>
 <% end %>
-<% current_page.data.title = painting.name %>
-
+<div class="row">
+  <div class="col">
+    <a href="">back to <%= painting.painting_category.name %></a>
+  </div>
+</div>
 <h2><%= painting.name %></h2>
 

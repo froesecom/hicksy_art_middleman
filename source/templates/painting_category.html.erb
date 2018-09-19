@@ -4,7 +4,9 @@
   <%= dato_meta_tags(painting_category) %>
 <% end %>
 
-<%= partial "partials/generic_content", locals: {heading: painting_category.name, content: painting_category.overview} %>
+<div class="mt-5">
+  <%= partial "partials/generic_content", locals: {heading: painting_category.name, content: painting_category.overview} %>
+</div>
 
 <div class="row mt-5">
   <% dato.paintings.select{|p| p.painting_category == painting_category}.each do |p| %>
