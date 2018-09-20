@@ -1,6 +1,6 @@
 <div class="mt-5">
   <h2>Contact Allen Hicks</h2>
-  <% form_tag "", class: "form--class--here", method: "post", data: {netlify: "true"} do %> 
+  <% form_tag "", class: "form--class--here", method: "post", data: {netlify: "true"}, name: "contact-form" do %> 
     <div class="form-group">
       <%= label_tag :name, caption: 'Name*' %>
       <%= text_field_tag :name, class: "form-control", required: true %>
