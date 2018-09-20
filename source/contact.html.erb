@@ -5,9 +5,9 @@
       <%= label_tag :name, caption: 'Name*' %>
       <%= text_field_tag :name, class: "form-control", required: true %>
       <%= label_tag :email, caption: 'Email*' %>
-      <%= input_tag :email, class: "form-control", required: true %>
+      <%= input_tag :email, name: "email", class: "form-control", required: true %>
       <%= label_tag :tel, caption: 'Phone' %>
-      <%= input_tag :tel, class: "form-control" %>
+      <%= input_tag :tel, name: "phone", class: "form-control" %>
       <%= label_tag :message, caption: 'Message*' %>
       <%= text_area_tag :message, class: "form-control", rows: "8", required: true %>
     </div>
