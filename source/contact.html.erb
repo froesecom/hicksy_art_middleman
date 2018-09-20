@@ -4,6 +4,8 @@
     <div class="form-group">
       <%= label_tag :name, caption: 'Name*' %>
       <%= text_field_tag :name, class: "form-control", required: true %>
+      <%= label_tag :email, caption: 'Email*' %>
+      <%= input_tag :email, class: "form-control", required: true %>
     </div>
     <%= submit_tag "Submit", "btn btn-primary" %> 
 <% end %> 
