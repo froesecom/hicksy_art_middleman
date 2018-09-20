@@ -2,7 +2,10 @@
   <h2>Contact Allen Hicks</h2>
   <% form_tag "", class: "form--class--here", method: "post", data: {netlify: "true"} do %> 
   <% field_set_tag do %> 
-    <p>hello</p>
+    <p>
+      <%= label_tag :name, class: 'classname' %>
+      <%= text_field_tag :name %>
+    </p>
   <% end %>
 <% end %> 
 </div>
