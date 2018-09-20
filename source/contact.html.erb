@@ -6,6 +6,10 @@
       <%= text_field_tag :name, class: "form-control", required: true %>
       <%= label_tag :email, caption: 'Email*' %>
       <%= input_tag :email, class: "form-control", required: true %>
+      <%= label_tag :tel, caption: 'Phone' %>
+      <%= input_tag :tel, class: "form-control" %>
+      <%= label_tag :message, caption: 'Message*' %>
+      <%= text_area_tag :message, class: "form-control", rows: "8", required: true %>
     </div>
     <%= submit_tag "Submit", "btn btn-primary" %> 
 <% end %> 
