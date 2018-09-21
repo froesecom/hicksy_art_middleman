@@ -1,5 +1,9 @@
 module PathHelper
 
+  def page_path(page)
+    "/#{page.slug}"
+  end
+
   def painting_category_path(pc)
     "#{base_painting_category_path(pc)}.html"
   end

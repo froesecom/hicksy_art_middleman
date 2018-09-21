@@ -1,0 +1,6 @@
+<% content_for(:head) do %>
+  <%= dato_meta_tags(page) %>
+<% end %>
+
+<%= partial "partials/generic_content", locals: {heading: page.heading, content: page.content} %>
+

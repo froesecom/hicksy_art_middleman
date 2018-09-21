@@ -30,9 +30,15 @@ dato.tap do |dato|
   dato.painting_categories.each do |pc|
     proxy painting_category_path(pc), "/templates/painting_category.html", locals: { painting_category: pc }, layout: :layout
   end
+
+  dato.pages.each do |page|
+    proxy page_path(page), "/templates/page.html", locals: { page: page }, layout: :layout
+  end
+
 end
 
 # tell Middleman to ignore the template
+ignore "/templates/page.html.erb"
 ignore "/templates/painting.html.erb"
 ignore "/templates/painting_category.html.erb"
 
