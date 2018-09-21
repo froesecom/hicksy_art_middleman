@@ -13,8 +13,10 @@ end
 
 require "lib/helpers/application_helper"
 require "lib/helpers/path_helper"
+require "lib/helpers/page_helper"
 helpers ApplicationHelper
 helpers PathHelper
+helpers PageHelper
 include PathHelper
 # helpers do
 #   def some_helper

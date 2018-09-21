@@ -4,3 +4,6 @@
 
 <%= partial "partials/generic_content", locals: {heading: page.heading, content: page.content} %>
 
+<% if page_partial(page) %>
+  <%= partial "partials/#{page_partial(page)}" %> 
+<% end %> 
