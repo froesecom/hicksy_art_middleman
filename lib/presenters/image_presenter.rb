@@ -1,0 +1,2 @@
+class ImagePresenter < SimpleDelegator
+end
