@@ -1,3 +1,6 @@
+# homepage
+- fix carousel
+
 # paintings
 - constrain images on the homepage
 - resize image
