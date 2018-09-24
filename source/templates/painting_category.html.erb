@@ -5,14 +5,4 @@
 <% end %>
 
 <%= partial "partials/generic_content", locals: {heading: painting_category.name, content: painting_category.overview} %>
-
-<div class="row mt-5">
-  <% dato.paintings.select{|p| p.painting_category == painting_category}.each do |p| %>
-    <div class="col-md-12 col-lg-4 mt-4">
-      <a href="<%= painting_path(p) %>">
-        <%= image_tag(p.photo.url(h: 600), class: "mb-4 img-fluid") %> 
-        <p class="text-center"><%= p.name %></p>
-      </a>
-    </div>
-  <% end %>
-</div>
+<%= partial "partials/image_collection", locals: {collection: paintings_for_category(painting_category, self)} %>

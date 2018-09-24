@@ -10,6 +10,7 @@ end
 # Presenters
 require "lib/presenters/image_presenter"
 require "lib/presenters/image_presenters/painting_category_image_presenter"
+require "lib/presenters/image_presenters/painting_image_presenter"
 
 # Helpers
 # Methods defined in the helpers block are available in templates
