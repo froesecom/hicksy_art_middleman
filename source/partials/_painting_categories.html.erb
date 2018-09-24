@@ -1,9 +1,1 @@
-<ul>
-  <% dato.painting_categories.each do |pc| %>
-    <li>
-      <a href="<%= painting_category_path(pc) %>">
-        <%= pc.name %>
-      </a>
-    </li>
-  <% end %>
-</ul>
+<%= partial "partials/image_collection", locals: {collection: painting_categories_image_collection(self)} %>
