@@ -5,11 +5,11 @@ module PathHelper
   end
 
   def painting_category_path(pc)
-    "#{base_painting_category_path(pc)}.html"
+    "#{base_painting_category_path(pc)}"
   end
 
   def painting_path(p)
-    "#{base_painting_category_path(p.painting_category)}/#{p.slug}.html"
+    "#{base_painting_category_path(p.painting_category)}/#{p.slug}"
   end
 
   def paintings_path
