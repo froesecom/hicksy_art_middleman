@@ -38,7 +38,6 @@ dato.tap do |dato|
   dato.pages.each do |page|
     proxy page_path(page), "/templates/page.html", locals: { page: page }, layout: :layout
   end
-
 end
 
 # tell Middleman to ignore the template
