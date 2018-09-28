@@ -10,15 +10,15 @@
   </div>
 </div>
 <div class="row py-4">
+  <div class="col-lg-8">
+    <%= image_tag(painting.photo.url(w:900), class: "img-fluid") %> 
+  </div>
   <div class="col-lg-4 d-flex flex-column">
     <h2><%= painting.name %></h2>
     <div class="text-muted pt-3">
       <%= painting.details %> 
     </div>
     <a href="/contact.html?subject=<%= painting.name %> painting" class="mt-auto btn btn-dark">Enquiry About Painting</a>
-  </div>
-  <div class="col-lg-8">
-    <%= image_tag(painting.photo.url(w:600), class: "img-fluid") %> 
   </div>
 </div>
 
