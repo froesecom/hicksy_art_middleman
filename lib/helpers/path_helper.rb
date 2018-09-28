@@ -13,11 +13,15 @@ module PathHelper
   end
 
   def paintings_path
-    "/paintings.html"
+    "/#{base_paintings_path}.html"
+  end
+
+  def base_paintings_path
+    "/paintings"
   end
 
   def base_painting_category_path(pc)
-    "#{paintings_path}/#{pc.slug}.html"
+    "#{base_paintings_path}/#{pc.slug}"
   end
 
 end
