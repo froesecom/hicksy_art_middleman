@@ -1,7 +1,7 @@
 <% content_for(:head) do %>
   <%= dato_meta_tags(painting) %>
 <% end %>
-<div class="row mb-5">
+<div class="row mb-md-5">
   <div class="col text-center">
     <span class="my-4 d-block">
       <a href="<%= painting_category_path(painting.painting_category) %>"><span class="oi oi-arrow-left"></span> back to <%= painting.painting_category.name %></a>
@@ -10,15 +10,19 @@
   </div>
 </div>
 <div class="row py-4">
-  <div class="col-lg-8">
+  <div class="col-lg-12">
     <%= image_tag(painting.photo.url(w:900), class: "img-fluid") %> 
   </div>
-  <div class="col-lg-4 d-flex flex-column">
+</div>
+<div class="row">
+  <div class="col-md-6 col-sm-12">
     <h2><%= painting.name %></h2>
     <div class="text-muted pt-3">
       <%= painting.details %> 
     </div>
-    <a href="/contact.html?subject=<%= painting.name %> painting" class="mt-auto btn btn-dark">Enquiry About Painting</a>
+  </div>
+  <div class="col-md-6 col-sm-12">
+    <a href="/contact.html?subject=<%= painting.name %> painting" class="d-block btn btn-dark">Enquiry About Painting</a>
   </div>
 </div>
 
