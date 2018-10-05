@@ -3,7 +3,7 @@
     <% if record.hero_painting %>
       <div class="col-md-12 col-lg-4 mt-4">
         <a href="<%= record.record_path %>">
-          <%= image_tag(record.image_url(w: 900), class: "mb-4 img-fluid") %> 
+          <%= image_tag(record.image_url(w: 900, auto: 'compress'), class: "mb-4 img-fluid") %> 
           <p class="text-center"><%= record.name %></p>
         </a>
       </div>
