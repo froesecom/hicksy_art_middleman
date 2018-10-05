@@ -4,3 +4,4 @@
 .sass-cache
 .env
 build/
+source/sitemap.xml.gz

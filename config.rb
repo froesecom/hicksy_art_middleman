@@ -67,6 +67,23 @@ page '/*.txt', layout: false
 #   },
 # )
 
+ready do
+  require 'sitemap_generator'
+  pages = sitemap.resources.select {|p| p.ext == '.html' && p.path != "index.html"}
+
+  SitemapGenerator::Sitemap.default_host = 'https://allenhicks.com.au'
+  SitemapGenerator::Sitemap.public_path = './source/'
+  SitemapGenerator::Sitemap.create do
+    high_priority = ["contact.html", "about.html", "paintings.html"]
+    add '/', changefreq: 'weekly', priority: 0.9
+    pages.each do |p|
+      path = p.path
+      priority = high_priority.include?(path) ? 0.8 : 0.5
+      add path, changefreq: 'weekly', priority: priority
+    end
+  end
+  #SitemapGenerator::Sitemap.ping_search_engines # Not needed if you use the rake tasks
+end
 
 # Build-specific configuration
 # https://middlemanapp.com/advanced/configuration/#environment-specific-settings
