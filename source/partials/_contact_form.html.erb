@@ -9,8 +9,10 @@
     <%= label_tag :message, caption: 'Message*' %>
     <%= text_area_tag :message, class: "form-control", rows: "8", required: true %>
     <div data-netlify-recaptcha></div>
-    <%= label_tag :address, caption: 'this field is not for humans' %>
-    <%= text_field_tag :address, class: "form-control" %>
+    <span class="d-none">
+      <%= label_tag :address, caption: 'this field is not for humans' %>
+      <%= text_field_tag :address, class: "form-control" %>
+    </span>
   </div>
   <%= submit_tag "Submit", "btn btn-primary" %> 
 <% end %> 
