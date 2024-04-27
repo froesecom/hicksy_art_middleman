@@ -1,8 +1,8 @@
 # Redirect domain aliases to primary domain
-http://allenhicks.net.au/* http://allenhicks.com.au/:splat 301!
-http://hicksyart.com.au/* http://allenhicks.com.au/:splat 301!
-http://www.allenhicks.net.au/* http://allenhicks.com.au/:splat 301!
-http://www.hicksyart.com.au/* http://allenhicks.com.au/:splat 301!
+http://allenhicks.net.au/* http://allenhicks.art/:splat 301!
+http://hicksyart.com.au/* http://allenhicks.art/:splat 301!
+http://www.allenhicks.net.au/* http://allenhicks.art/:splat 301!
+http://www.hicksyart.com.au/* http://allenhicks.art/:splat 301!
 
 # Optional: Redirect default Netlify subdomain to primary domain
-http://allenhicks.netlify.com/* http://allenhicks.com.au/:splat 301!
+http://allenhicks.netlify.com/* http://allenhicks.art/:splat 301!

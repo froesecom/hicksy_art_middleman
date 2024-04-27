@@ -71,7 +71,7 @@ ready do
   require 'sitemap_generator'
   pages = sitemap.resources.select {|p| p.ext == '.html' && p.path != "index.html"}
 
-  SitemapGenerator::Sitemap.default_host = 'https://allenhicks.com.au'
+  SitemapGenerator::Sitemap.default_host = 'https://allenhicks.art'
   SitemapGenerator::Sitemap.public_path = './source/'
   SitemapGenerator::Sitemap.create do
     high_priority = ["contact.html", "about.html", "paintings.html"]
