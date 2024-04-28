@@ -83,6 +83,8 @@ ready do
     end
   end
   SitemapGenerator::Sitemap.ping_search_engines if build?
+
+  proxy "_redirects", "netlify-redirects", ignore: true
 end
 
 # Build-specific configuration
