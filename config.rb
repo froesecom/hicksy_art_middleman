@@ -79,7 +79,8 @@ ready do
     pages.each do |p|
       path = p.path
       priority = high_priority.include?(path) ? 0.8 : 0.5
-      add path, changefreq: 'weekly', priority: priority
+      # remove .html suffix
+      add path.split(".html").first, changefreq: 'weekly', priority: priority
     end
   end
   SitemapGenerator::Sitemap.ping_search_engines if build?
