@@ -4,5 +4,6 @@
   <%= dato_meta_tags(painting_category) %>
 <% end %>
 
+<link rel="canonical" href="<%= painting_category_path(painting_category, true) %>" />
 <%= partial "partials/generic_content", locals: {heading: painting_category.name, content: painting_category.overview} %>
 <%= partial "partials/image_collection", locals: {collection: paintings_for_category(painting_category, self)} %>

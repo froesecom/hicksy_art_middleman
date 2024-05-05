@@ -1,6 +1,7 @@
 <% content_for(:head) do %>
   <%= dato_meta_tags(painting) %>
 <% end %>
+<link rel="canonical" href="<%= painting_path(painting, true) %>" />
 <div class="row mb-md-5">
   <div class="col text-center">
     <span class="my-4 d-block">
